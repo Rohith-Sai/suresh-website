@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", system-ui, -apple-system, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-ink-950: #111722;
+  --color-ink-900: #1a2232;
+  --color-navy-900: #1d2536;
+  --color-navy-800: #2f3a4f;
+  --color-ivory-50: #f7f7f7;
+  --color-ivory-100: #eceef2;
+  --color-gts-red: #e8202a;
+  --color-gts-red-dark: #c81922;
+  --color-gts-red-soft: #ff6b73;
+  --color-gts-navy: #2f3a4f;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  button:not(:disabled),
+  a[href],
+  select:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid #e8202a;
+    outline-offset: 2px;
+  }
+}
+
+/* Architectural coordinate grids */
+.bg-arch-grid-light {
+  background-image:
+    linear-gradient(to right, rgba(47, 58, 79, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(47, 58, 79, 0.055) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.bg-arch-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.075) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.075) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.animate-gradient-text {
+  background-size: 100% 100%;
+}
+
+.animate-signal-flow {
+  stroke-dasharray: 6 6;
+}
+
+/* Floating label styling for high-end contact form */
+.floating-field:focus-within .floating-label,
+.floating-field[data-filled="true"] .floating-label {
+  transform: translateY(-1.25rem) scale(0.84);
+  color: #c81922;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
