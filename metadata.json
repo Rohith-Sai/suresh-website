@@ -1,0 +1,8 @@
+{
+  "name": "Meridian Labs — Software Development & Engineering Studio",
+  "description": "Custom software engineering, enterprise web and mobile applications, AI systems, and cloud architecture built for scale.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
